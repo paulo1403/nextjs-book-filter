@@ -2,26 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: azure;
+  padding: 3rem;
+}
+
+h1 {
+  color: red;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.header input {
+  max-width: 400px;
+  padding: 0.5rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card > div:first-of-type h4 {
+  color: gray;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card > div:first-of-type .pill {
+  background-color: greenyellow;
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
+  color: green;
+  opacity: 0.8;
+}
+
+.card > div:nth-child(2) h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card > div:nth-child(2) p {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.card > div:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.card > div:nth-child(3) a {
+  text-transform: uppercase;
+  color: blue;
 }
