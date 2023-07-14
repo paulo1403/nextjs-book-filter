@@ -58,7 +58,7 @@ export default function Home() {
         })
         .map(function (book, index) {
           return (
-            <div key={index + book.authorId} className="card">
+            <div key={(index + book.authorId).toString()} className="card">
               <div>
                 <h4>{getAuthorNameById(book.authorId)}</h4>
                 <div className="pill">authorid: {book.authorId} </div>
